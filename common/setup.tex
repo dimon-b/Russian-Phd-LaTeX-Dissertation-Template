@@ -2,8 +2,8 @@
 \makeatletter
 \@ifundefined{c@draft}{
   \newcounter{draft}
-  \setcounter{draft}{0}  % 0 --- чистовик (максимальное соблюдение ГОСТ)
-                         % 1 --- черновик (отклонения от ГОСТ, но быстрая сборка итоговых PDF)
+  \setcounter{draft}{1}  		% 0 --- чистовик (максимальное соблюдение ГОСТ)
+                         		% 1 --- черновик (отклонения от ГОСТ, но быстрая сборка итоговых PDF)
 }{}
 \makeatother
 
@@ -11,9 +11,9 @@
 \makeatletter
 \@ifundefined{c@usealtfont}{
   \newcounter{usealtfont}
-  \setcounter{usealtfont}{1}    % 0 --- шрифты на базе Computer Modern
-                                % 1 --- использовать пакет pscyr, при его наличии
-                                % 2 --- использовать пакет XCharter, при наличии подходящей версии
+  \setcounter{usealtfont}{1}	% 0 --- шрифты на базе Computer Modern
+                               	% 1 --- использовать пакет pscyr, при его наличии
+                               	% 2 --- использовать пакет XCharter, при наличии подходящей версии
 }{}
 \makeatother
 
@@ -24,7 +24,8 @@
 \makeatletter
 \@ifundefined{c@bibliosel}{
   \newcounter{bibliosel}
-  \setcounter{bibliosel}{1}           % 0 --- встроенная реализация с загрузкой файла через движок bibtex8; 1 --- реализация пакетом biblatex через движок biber
+  \setcounter{bibliosel}{0}		% 0 --- встроенная реализация с загрузкой файла через движок bibtex8; 
+  								% 1 --- реализация пакетом biblatex через движок biber
 }{}
 \makeatother
 
@@ -32,7 +33,7 @@
 \makeatletter
 \@ifundefined{c@imgprecompile}{
   \newcounter{imgprecompile}
-  \setcounter{imgprecompile}{0}   % 0 --- без предкомпиляции;
-                                  % 1 --- пользоваться предварительно скомпилированными pdf вместо генерации заново из tikz
+  \setcounter{imgprecompile}{0}	% 0 --- без предкомпиляции;
+  								% 1 --- пользоваться предварительно скомпилированными pdf вместо генерации заново из tikz
 }{}
 \makeatother
